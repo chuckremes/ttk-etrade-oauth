@@ -65,15 +65,15 @@ module OAuth
     end
 
     def debug(request)
-      STDERR.puts '====== REQUEST DEBUG PATH ======='
+      STDERR.puts '= REQ PATH ='
       STDERR.puts request.path
-      STDERR.puts '====== REQUEST DEBUG HEADERS ======='
+      STDERR.puts '= REQ HEADERS ='
       request.each_header do |header, values|
         STDERR.puts "\t#{header}: #{values.inspect}"
       end
-      STDERR.puts '====== REQUEST DEBUG BODY ======='
+      STDERR.puts '= REQ BODY ='
       STDERR.puts request.body
-      STDERR.puts '====== REQUEST DEBUG END ======='
+      STDERR.puts '= REQ END ='
     end
   end
 end
